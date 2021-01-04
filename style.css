@@ -1,0 +1,195 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #eee;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 80vh;
+	position: relative;	
+}
+
+.detalle-container{
+	display: flex;
+	width: 100%;
+}
+
+/*-----------AGREGAR EMPLEADO-------------*/
+.agregar-empleado-container {
+	background-color: #fafafa;
+	width: 330px;
+	margin: 20px;
+	padding: 15px 8px;
+	box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+	width: 50%;
+	border-radius: 12px;
+}
+
+h2 {
+	text-align: center;
+	margin: 10px 0;
+	letter-spacing: 0.5px;
+}
+
+.agregar-empleado {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.agregar-empleado select, input {
+	background-color: #fafafa;
+	width: 80%;
+	height: 30px;
+	margin: 15px 0;
+	border: 1px solid #0001;
+	box-shadow: 0.2px 0.2px 2px #aaa;
+	padding-left: 8px;
+	outline: none;
+}
+
+.agregar-empleado button {
+	margin: 10px 0;
+	font-size: 16px;
+	padding: 5px 10px;
+}
+
+/*-----------INFO EMPLEADOS-------------*/
+.empleados-container {
+	height: 50vh;
+	margin: 18px 30px;
+	width: 50%;
+}
+
+.empleados-busqueda{
+	background-color: #fafafa;
+    padding: 15px 8px;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+    width: 100%;
+	border-radius: 12px;
+	margin-bottom: 12px;
+	padding-left: 24px;
+}
+
+.buscar-id button {
+	border: none;
+	font-size: 20px;
+	background-color: transparent;
+	margin-left: 5px;
+	outline: none;
+}
+
+.lista-empleados-tabla {
+	border-radius: 12px;
+	padding: 0px 12px;
+	width: 100%;
+}
+
+.lista-empleados-titulo{
+	padding: 8px 16px;
+	display: flex;
+}
+
+.promedio-años{
+	margin-left: auto;
+}
+
+.lista-empleados{
+	background-color: #fafafa;
+    padding: 15px 8px;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+    width: 100%;
+	border-radius: 12px;
+}
+
+/*--------INFO EMPLEADO PARTICULAR--------*/
+.info-empleado {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: #000a;
+	visibility: hidden;
+	z-index: 10;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.info-empleado-contenido{
+	color: black;
+    background-color: white;
+    font-size: 20px;
+	z-index: 20;
+    padding: 7px;
+    border: 2px solid #fff;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.3);
+    width: 50%;
+    border-radius: 12px;
+    padding: 24px 48px;
+}
+
+.close {
+	color: black;
+    font-size: 24px;
+    text-align: right;
+}
+
+.info-empleado-visible {
+	visibility: visible;
+}
+
+/*-------DATOS EMPLEADOS -------------*/  
+.datos-empleado-container{
+	display: flex;
+}
+
+.datos-empleado-container div {
+	margin: 4px;
+}
+
+.datos-empleados-ver{
+	color: #3399ff;
+}
+
+.datos-empleados-ver:hover{
+	font-weight: bold;
+}
+
+.agregar-empleado button,
+.buscar-id button,
+.datos-empleados-ver,
+.close:hover{
+	cursor: pointer;
+}
+
+/*---------RESPONSIVE--------*/
+@media screen and (max-width: 730px) {
+	.promedio-años {
+		text-align: center;
+	}
+}
+
+/*-----*/
+.visible{
+	visibility: visible;
+}
+
+.invisible{
+	visibility: hidden;
+}
+
+.show{
+	display: inline;
+}
+
+.hidden{
+	display: none;
+}
+

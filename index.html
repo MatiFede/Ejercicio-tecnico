@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>miEmpresa S.A.</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+	<div class="detalle-container">
+			<div class="agregar-empleado-container">
+					<h2>Agregar Empleado</h2>
+			
+					<form class="agregar-empleado" id="agregar-empleado">
+						<select id="tipo-empleado">
+							<option value="Programador">Programador</option>
+							<option value="Diseñador">Diseñador</option>
+						</select>
+						<input type="text" placeholder="nombre" required="" id="nombre">
+						<input type="text" placeholder="apellido" required="" id="apellido">
+						<input type="number" placeholder="edad" required="" id="edad">
+						<select id="lenguaje" class="show">
+							<option>PHP</option>
+							<option>NET</option>
+							<option>Python</option>
+						</select>
+						<select id="tipo" class="hidden">
+							<option>Gráfico</option>
+							<option>Web</option>
+						</select>
+						<button>Enviar</button>
+					</form>
+			</div>	
+			
+			<div class="empleados-container">
+					<div class="empleados-busqueda">
+							<form id="buscar-id" class="buscar-id">
+									Buscar Empleado
+									<input type="number" placeholder="Buscar por id..." id="buscar-id-input">
+									<button type="submit" ><i class="fas fa-search"></i></button>
+									<div id="sin-resultados"></div>
+							</form>
+					</div>
+					<div class="lista-empleados-tabla invisible" id="lista-empleados-tabla">
+						<div class="lista-empleados-titulo">
+							<h3>Empleados</h3>
+							<div class="promedio-años"> 
+									<i>Promedio de años:</i> 
+									<span id="promedio" class="promedio">X</span> 
+							</div>
+						</div>
+						<div id="lista-empleados" class="lista-empleados"></div>
+					</div>
+			</div>
+	</div>
+
+	<div class="info-empleado" id="info-empleado"></div>
+
+	<script type="text/javascript" src="clases/empresa.js"></script>
+	<script type="text/javascript" src="clases/diseñador.js"></script>
+	<script type="text/javascript" src="clases/programador.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	
+</body>
+</html>
